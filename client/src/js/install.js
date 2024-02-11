@@ -16,9 +16,10 @@ butInstall.addEventListener('click', async () => {
     // Show the install prompt
   deferredPrompt.prompt();
   // Wait for the user's response
-  const choiceResult = await deferredPrompt.userChoice;
+  const { outcome } = await deferredPrompt.userChoice;
   // Log the user's choice
-  console.log('User choice:', choiceResult.outcome);
+  console.log(`User response to the install prompt: ${outcome}`);
+  deferredPrompt = null;
   // Hide the install button
   butInstall.style.display = 'none';
 });
