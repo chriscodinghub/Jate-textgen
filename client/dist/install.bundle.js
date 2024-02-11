@@ -1,0 +1,1 @@
+(()=>{const e=document.getElementById("buttonInstall");let t;window.addEventListener("beforeinstallprompt",(n=>{n.preventDefault(),t=n,e.style.display="block"})),e.addEventListener("click",(async()=>{t.prompt();const n=await t.userChoice;console.log("User choice:",n.outcome),e.style.display="none"})),window.addEventListener("appinstalled",(e=>{console.log("App installed")}))})();
